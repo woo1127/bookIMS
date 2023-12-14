@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="800.0" stylesheets="@../Assets/style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bookIMS.Controllers.DashboardController">
+   <children>
+      <AnchorPane prefHeight="50.0" prefWidth="800.0" style="-fx-background-color: #fe6132;">
+         <children>
+            <Label layoutY="8.0" prefHeight="35.0" prefWidth="128.0" text="Book IMS" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </Label>
+            <Button fx:id="logoutBtn" layoutX="717.0" layoutY="5.0" mnemonicParsing="false" onAction="#logoutClick" style="-fx-background-color: transparent; -fx-cursor: hand;" text="Logout" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <padding>
+                  <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+               </padding>
+            </Button>
+            <Label fx:id="usernameLabel" layoutX="128.0" layoutY="8.0" prefHeight="35.0" prefWidth="128.0" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </Label>
+            <Button fx:id="salesRecordBtn" layoutX="598.0" layoutY="5.0" mnemonicParsing="false" onAction="#salesRecordClick" style="-fx-background-color: transparent; -fx-cursor: hand;" text="Sales Record" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <padding>
+                  <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+               </padding>
+            </Button>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </AnchorPane>
+      <AnchorPane layoutX="16.0" layoutY="68.0" prefHeight="180.0" prefWidth="770.0" styleClass="card" stylesheets="@../Assets/style.css">
+         <children>
+            <HBox layoutX="14.0" layoutY="60.0" prefHeight="25.0" prefWidth="350.0">
+               <children>
+                  <Label prefHeight="25.0" prefWidth="104.0" text="Book ID">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="bookIdTextField" prefHeight="25.0" prefWidth="340.0" />
+               </children>
+               <padding>
+                  <Insets bottom="20.0" />
+               </padding>
+            </HBox>
+            <HBox layoutX="14.0" layoutY="13.0" prefHeight="25.0" prefWidth="350.0">
+               <children>
+                  <Label prefHeight="25.0" prefWidth="104.0" text="Title">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="bookTitleTextField" prefHeight="25.0" prefWidth="340.0" />
+               </children>
+               <padding>
+                  <Insets bottom="20.0" />
+               </padding>
+            </HBox>
+            <HBox layoutX="400.0" layoutY="105.0" prefHeight="25.0" prefWidth="350.0">
+               <children>
+                  <Label prefHeight="25.0" prefWidth="104.0" text="Author" />
+                  <TextField fx:id="bookAuthorTextField" prefHeight="25.0" prefWidth="340.0" />
+               </children>
+               <padding>
+                  <Insets bottom="20.0" />
+               </padding>
+            </HBox>
+            <HBox layoutX="400.0" layoutY="60.0" prefHeight="25.0" prefWidth="350.0">
+               <children>
+                  <Label prefHeight="25.0" prefWidth="104.0" text="Quantity" />
+                  <TextField fx:id="bookQtyTextField" prefHeight="25.0" prefWidth="340.0" />
+               </children>
+               <padding>
+                  <Insets bottom="20.0" />
+               </padding>
+            </HBox>
+            <HBox layoutX="14.0" layoutY="105.0" prefHeight="25.0" prefWidth="350.0">
+               <children>
+                  <Label prefHeight="25.0" prefWidth="104.0" text="Genre" />
+                  <TextField fx:id="bookGenreTextField" prefHeight="25.0" prefWidth="340.0" />
+               </children>
+            </HBox>
+            <HBox layoutX="400.0" layoutY="14.0" prefHeight="25.0" prefWidth="350.0">
+               <children>
+                  <Label prefHeight="25.0" prefWidth="104.0" text="Unit Price" />
+                  <TextField fx:id="bookUnitPriceTextField" prefHeight="25.0" prefWidth="340.0" />
+               </children>
+               <padding>
+                  <Insets bottom="20.0" />
+               </padding>
+            </HBox>
+            <HBox layoutX="14.0" layoutY="156.0" prefHeight="25.0" prefWidth="407.0">
+               <children>
+                  <Button fx:id="addBtn" mnemonicParsing="false" onAction="#addBook" prefWidth="80.0" style="-fx-cursor: hand; -fx-background-color: lime;" styleClass="btn" stylesheets="@../Assets/style.css" text="Add" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets right="15.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="updateBtn" mnemonicParsing="false" onAction="#updateBook" prefWidth="80.0" style="-fx-cursor: hand; -fx-background-color: lightblue;" styleClass="btn" stylesheets="@../Assets/style.css" text="Update" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets right="15.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="clearBtn" mnemonicParsing="false" onAction="#clearBook" prefWidth="80.0" style="-fx-cursor: hand; -fx-background-color: #d3d3d3;" styleClass="btn" stylesheets="@../Assets/style.css" text="Clear" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets right="15.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="deleteBtn" mnemonicParsing="false" onAction="#deleteBook" prefHeight="25.0" prefWidth="80.0" style="-fx-cursor: hand; -fx-background-color: crimson;" styleClass="btn" stylesheets="@../Assets/style.css" text="Delete" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets right="15.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </AnchorPane>
+      <AnchorPane layoutX="16.0" layoutY="286.0" prefHeight="354.0" prefWidth="770.0" styleClass="card" stylesheets="@../Assets/style.css">
+         <children>
+            <TableView fx:id="bookTableView" layoutX="10.0" layoutY="56.0" onMouseClicked="#selectBook" prefHeight="291.0" prefWidth="750.0" stylesheets="@../Assets/style.css">
+              <columns>
+                  <TableColumn fx:id="bookIdCol" minWidth="0.0" prefWidth="60.0" text="Book ID" />
+                <TableColumn fx:id="bookTitleCol" minWidth="0.0" prefWidth="260.0" text="Title" />
+                  <TableColumn fx:id="bookAuthorCol" minWidth="0.0" prefWidth="160.0" text="Author" />
+                <TableColumn fx:id="bookGenreCol" minWidth="0.0" prefWidth="120.0" text="Genre" />
+                  <TableColumn fx:id="bookQtyCol" minWidth="0.0" prefWidth="70.0" text="Quantity" />
+                  <TableColumn fx:id="bookUnitPriceCol" minWidth="0.0" text="Unit Price" />
+              </columns>
+            </TableView>
+            <TextField fx:id="bookSearchTextField" layoutX="14.0" layoutY="22.0" onKeyTyped="#searchBook" prefHeight="25.0" prefWidth="320.0" promptText="Search" />
+            <Button fx:id="searchBtn" layoutX="350.0" layoutY="22.0" mnemonicParsing="false" onAction="#searchBook" prefHeight="25.0" prefWidth="80.0" style="-fx-cursor: hand;" styleClass="btn-primary" stylesheets="@../Assets/style.css" text="Search" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

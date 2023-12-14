@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bookIMS.Controllers.SalesRecordController">
+   <children>
+      <AnchorPane prefHeight="50.0" prefWidth="1000.0" style="-fx-background-color: #fe6132;">
+         <children>
+            <Label layoutY="8.0" prefHeight="35.0" prefWidth="128.0" text="Book IMS" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </Label>
+            <Button fx:id="logoutBtn" layoutX="909.0" layoutY="5.0" mnemonicParsing="false" onAction="#logoutClick" style="-fx-background-color: transparent; -fx-cursor: hand;" text="Logout" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <padding>
+                  <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+               </padding>
+            </Button>
+            <Button fx:id="mainBtn" layoutX="837.0" layoutY="5.0" mnemonicParsing="false" onAction="#mainBtnClick" style="-fx-background-color: transparent; -fx-cursor: hand;" text="Main" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <padding>
+                  <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+               </padding>
+            </Button>
+            <Label fx:id="usernameLabel" layoutX="128.0" layoutY="8.0" prefHeight="35.0" prefWidth="128.0" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </Label>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </AnchorPane>
+      <Label layoutY="8.0" prefHeight="35.0" prefWidth="128.0" text="Book IMS" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+      </Label>
+      <Label layoutX="26.0" layoutY="66.0" text="Sales Record">
+         <font>
+            <Font size="24.0" />
+         </font>
+         <padding>
+            <Insets bottom="5.0" />
+         </padding>
+      </Label>
+      <TableView fx:id="salesRecordTableView" layoutX="25.0" layoutY="106.0" prefHeight="500.0" prefWidth="950.0">
+        <columns>
+          <TableColumn fx:id="saleIdCol" prefWidth="75.0" text="Sale ID" />
+            <TableColumn fx:id="invoiceNoCol" prefWidth="75.0" text="Invoice No" />
+          <TableColumn fx:id="dateCol" prefWidth="111.0" text="Date" />
+            <TableColumn fx:id="usernameCol" prefWidth="85.0" text="Username" />
+            <TableColumn fx:id="bookIdCol" prefWidth="61.0" text="Book ID" />
+            <TableColumn fx:id="bookTitleCol" prefWidth="292.0" text="Book Title" />
+            <TableColumn fx:id="purchasedQtyCol" prefWidth="102.0" text="Purchased Qty" />
+            <TableColumn fx:id="unitPriceCol" prefWidth="61.0" text="Unit Price" />
+            <TableColumn fx:id="totalAmountCol" prefWidth="87.0" text="Total Amount" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
